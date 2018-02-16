@@ -1,0 +1,14 @@
+#@layout()
+#define main()
+<h1><a href="/user">用户管理</a></h1>
+<form action="/user/find" method="post">
+    <fieldset>
+        <legend>登录</legend>
+        <label>账号</label>
+        <input type="text" name="user.account" value="#(user.account??)" />#(accountMsg)
+        <label>密码</label>
+        <input type="password" name="user.password" value="#(user.password??)" />#(passwordMsg)
+        <input value="提交" type="submit">
+    </fieldset>
+</form>
+#end

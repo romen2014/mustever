@@ -1,0 +1,16 @@
+#@layout()
+#define main()
+<h1><a href="/user">用户管理</a></h1>
+<form action="/user/update" method="post">
+    <fieldset>
+        <legend>修改密码</legend>
+        <input type="hidden" name="user.id" value="#(user.id??)" />
+        <input type="text" name="user.account" value="#(user.account??)" readonly>
+        <label>密码</label>
+        <input type="password" name="user.password" />#(passwordMsg1)
+        <label>密码</label>
+        <input type="password" name="password2" />#(passwordMsg2)
+        <input value="提交" type="submit">
+    </fieldset>
+</form>
+#end

@@ -1,0 +1,31 @@
+#@layout()
+#define main()
+<h1><a href="/user">用户管理</a></h1>
+<h1><a href="/user/register">注册</a> | <a href="/user/login">登录</a></h1>
+    <table border="1px solid">
+        <tbody>
+        <tr>
+            <th width="4%">id</th>
+            <th width="20%">账号</th>
+            <th width="20%">手机号</th>
+            <th width="20%">密码</th>
+            <th width="20%">操作</th>
+        </tr>
+
+        #for(x : page.getList())
+        <tr>
+            <td style="text-align:left;">#(x.id)</td>
+            <td style="text-align:left;">#(x.account)</td>
+            <td style="text-align:left;">#(x.mobile)</td>
+            <td style="text-align:left;">#(x.password)</td>
+            <td style="text-align:left;">
+                &nbsp;&nbsp;<a href="/user/delete/#(x.id)">删除</a>
+                &nbsp;&nbsp;| <a href="/user/changePwd/#(x.id)">修改密码</a>
+            </td>
+        </tr>
+        #end
+        </tbody>
+    </table>
+    #@paginate(page.pageNumber, page.totalPage, "/user/")
+</div>
+#end

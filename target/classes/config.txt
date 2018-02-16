@@ -1,0 +1,4 @@
+jdbcUrl = jdbc:mysql://localhost/mustever?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+user = romen
+password = 654321
+devMode = true

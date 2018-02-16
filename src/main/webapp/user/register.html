@@ -1,0 +1,15 @@
+#@layout()
+#define main()
+<h1><a href="/user">用户管理</a></h1>
+<form action="/user/save" method="post">
+    <fieldset>
+        <legend>注册</legend>
+        <input type="hidden" name="user.id" value="#(user.id??)" />
+        <label>账号</label>
+        <input type="text" name="user.account" value="#(user.account??)" />#(accountMsg)
+        <label>密码</label>
+        <input type="password" name="user.password" value="#(user.password??)" />#(passwordMsg)
+        <input value="提交" type="submit">
+    </fieldset>
+</form>
+#end

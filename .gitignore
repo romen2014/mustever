@@ -1,0 +1,14 @@
+# Java class files
+*.class
+
+# Eclipse project files
+.classpath
+.project
+
+.idea
+.DS_Store
+*.iml
+*.log
+*.iws
+*.ipr
+.directory
