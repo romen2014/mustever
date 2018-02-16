@@ -12,3 +12,6 @@
 *.iws
 *.ipr
 .directory
+
+# Project Files
+target
